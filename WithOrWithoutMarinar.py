@@ -14,10 +14,10 @@ while x != 16:
     x += 1
     ellipsisMessage = ("InfoTechCenter OS is Booting" + "." * ellipsis)
     ellipsis += 1
-    sys.stdout.write("\r" + ellipsisMessage + "   ")
+    sys.stdout.write("\r\033[KK" + ellipsisMessage)
     sys.stdout.flush()
     time.sleep(0.75)
     if ellipsis == 4:
         ellipsis = 0
     if x == 16:
-        print("\n\nOperating System Booted up - ID Scanned & Verified - Access Granted")
+        print("\n\nOperating System Booted up - ID Scanned & Verified - Access Granted\n")
